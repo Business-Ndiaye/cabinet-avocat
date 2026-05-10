@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace client | Cabinet Me Fara Gomis et Associés</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-balance-scale"></i> Cabinet Me Fara Gomis et Associés</h1>
+            </div>
+            <nav>
+                <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="team.html">Équipe</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="espace-client.html" class="active">Espace client</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container hero-copy">
+                <span class="badge">Sécurité</span>
+                <h2>Connexion sécurisée à votre espace client.</h2>
+                <p>Gérez vos dossiers, suivez vos rendez-vous et consultez vos documents dans un environnement protégé.</p>
+                <div class="hero-actions">
+                    <a class="btn" href="contact.html">Demander un accès</a>
+                    <a class="btn" href="index.html">Retour à l'accueil</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container card-grid">
+                <div class="form-panel">
+                    <h2>Connexion client</h2>
+                    <p class="form-note">Votre connexion est sécurisée. Veuillez utiliser votre email professionnel et votre mot de passe.</p>
+                    <div class="alert"></div>
+                    <form data-form="client-login">
+                        <label for="client-email-login">Email</label>
+                        <input id="client-email-login" type="email" name="email" placeholder="client@example.com" required>
+
+                        <label for="client-password">Mot de passe</label>
+                        <input id="client-password" type="password" name="password" placeholder="********" minlength="8" required>
+
+                        <button type="submit">Se connecter</button>
+                    </form>
+                </div>
+                <div class="info-box">
+                    <h3>Connexion sécurisée</h3>
+                    <p>Les échanges sont chiffrés et vos informations sont protégées dans l’espace client confidentiel.</p>
+                    <p>En cas de problème, notre équipe support vous assiste rapidement.</p>
+                    <div class="client-dashboard" style="display:none; margin-top:1.5rem;">
+                        <h3>Bienvenue dans votre espace sécurisé</h3>
+                        <p>Accédez à vos documents, suivez l’avancement de vos dossiers et communiquez avec votre avocat dédié.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>Cabinet Me Fara Gomis</h4>
+                <p>Des conseils stratégiques et une défense haut de gamme pour les particuliers et les entreprises.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Immeuble ABC, Plateau, Dakar</p>
+                <p>+221 33 123 45 67</p>
+                <p>contact@faragomis-avocats.sn</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Cabinet Me Fara Gomis et Associés. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/221331234567?text=Bonjour%20Cabinet%20Gomis%20et%20Associ%C3%A9s" target="_blank" rel="noreferrer" aria-label="Contact WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

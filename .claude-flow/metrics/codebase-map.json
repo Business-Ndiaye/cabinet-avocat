@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-05-10T20:47:55.752Z",
+  "projectRoot": "C:\\Users\\BISMILLAH\\projets\\cabinet-avocat",
+  "structure": {
+    "hasPackageJson": false,
+    "hasTsConfig": false,
+    "hasClaudeConfig": true,
+    "hasClaudeFlow": true
+  },
+  "scannedAt": 1778446075752
+}
