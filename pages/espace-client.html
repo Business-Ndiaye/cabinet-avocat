@@ -165,15 +165,17 @@ tr:hover td{background:rgba(201,168,76,.02)}
       </div>
       <div class="login-body">
         <div class="login-error" id="loginError">Email ou mot de passe incorrect.</div>
-        <div class="fg">
-          <label>Adresse email</label>
-          <input type="email" id="loginEmail" placeholder="votre@email.com" onkeydown="if(event.key==='Enter')doLogin()">
-        </div>
-        <div class="fg">
-          <label>Mot de passe</label>
-          <input type="password" id="loginPwd" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()">
-        </div>
-        <button class="login-btn" onclick="doLogin()">Accéder à mon espace →</button>
+        <form data-form="client-login">
+          <div class="fg">
+            <label>Adresse email</label>
+            <input type="email" name="email" id="loginEmail" placeholder="votre@email.com" required>
+          </div>
+          <div class="fg">
+            <label>Mot de passe</label>
+            <input type="password" name="password" id="loginPwd" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="login-btn">Accéder à mon espace →</button>
+        </form>
         <div class="demo-hint">Démo : email: client@demo.sn &nbsp;|&nbsp; mdp: demo2026</div>
         <span class="forgot-link" onclick="alert('Contactez le cabinet : contact@cabinetgomis.sn')">Mot de passe oublié ?</span>
       </div>
