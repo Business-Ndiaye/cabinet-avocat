@@ -1,63 +1,650 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Cabinet d'Avocat</title>
-  <link rel="stylesheet" href="../styles/styles.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- SEO META TAGS -->
+<title>Cabinet Me Fara Gomis & Associés | Avocat Dakar Sénégal</title>
+<meta name="description" content="Cabinet d'avocats de prestige à Dakar. Droit des affaires, pénal, famille, immobilier. Me Fara Gomis & Associés — excellence juridique depuis 2005.">
+<meta name="keywords" content="avocat Dakar, cabinet avocat Sénégal, avocat affaires Dakar, consultation juridique Dakar, droit pénal Sénégal, Me Fara Gomis">
+<meta name="author" content="Cabinet Me Fara Gomis & Associés">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://cabinetgomis.sn/">
+
+<!-- OPEN GRAPH (réseaux sociaux) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cabinet Me Fara Gomis & Associés | Avocat Dakar">
+<meta property="og:description" content="Excellence juridique depuis 2005 à Dakar. Droit des affaires, pénal, famille et immobilier.">
+<meta property="og:url" content="https://cabinetgomis.sn/">
+<meta property="og:site_name" content="Cabinet Me Fara Gomis & Associés">
+<meta property="og:locale" content="fr_SN">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cabinet Me Fara Gomis & Associés | Avocat Dakar">
+<meta name="twitter:description" content="Excellence juridique à Dakar. Droit des affaires, pénal, famille et immobilier.">
+
+<!-- STRUCTURED DATA (Google Rich Results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Cabinet Me Fara Gomis & Associés",
+  "description": "Cabinet d'avocats de prestige à Dakar, Sénégal",
+  "url": "https://cabinetgomis.sn",
+  "telephone": "+221331234567",
+  "email": "contact@cabinetgomis.sn",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Avenue Bourguiba, Plateau",
+    "addressLocality": "Dakar",
+    "addressCountry": "SN"
+  },
+  "openingHours": "Mo-Fr 08:00-18:00",
+  "priceRange": "$$",
+  "areaServed": "Sénégal"
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --noir:#080808;
+  --noir-2:#0f0f0f;
+  --noir-3:#161616;
+  --or:#C9A84C;
+  --or-light:#E2BC6A;
+  --or-pale:#f0dfa0;
+  --or-dim:rgba(201,168,76,0.15);
+  --blanc:#F8F4EC;
+  --blanc-pur:#fff;
+  --gris:#777;
+  --gris-clair:rgba(248,244,236,0.55);
+  --border:rgba(201,168,76,0.12);
+}
+html{scroll-behavior:smooth}
+body{background:var(--noir);color:var(--blanc);font-family:'Raleway',sans-serif;font-weight:300;overflow-x:hidden}
+
+/* ── SCROLL NAV ── */
+nav{position:fixed;top:0;width:100%;z-index:200;padding:1.1rem 5%;display:flex;align-items:center;justify-content:space-between;transition:all .4s;background:rgba(8,8,8,0);border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(8,8,8,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.logo-wrap{display:flex;flex-direction:column}
+.logo-main{font-family:'Cinzel',serif;font-size:.95rem;letter-spacing:.18em;color:var(--or)}
+.logo-sub{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gris);margin-top:2px}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blanc);text-decoration:none;opacity:.7;transition:all .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--or);transition:width .3s}
+.nav-links a:hover{opacity:1;color:var(--or)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--or);color:var(--noir);font-family:'Raleway',sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;padding:.65rem 1.5rem;border:none;cursor:pointer;transition:all .3s;text-decoration:none;font-weight:500}
+.nav-cta:hover{background:var(--or-light)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:300;background:none;border:none}
+.burger span{width:22px;height:1px;background:var(--or);display:block;transition:.3s}
+
+/* ── MOBILE MENU ── */
+.mobile-menu{display:none;position:fixed;inset:0;background:var(--noir);z-index:250;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--blanc);text-decoration:none;transition:color .3s;letter-spacing:.05em}
+.mobile-menu a:hover{color:var(--or)}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--or);font-size:1.5rem;cursor:pointer}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:9rem 5% 6rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:
+  radial-gradient(ellipse 70% 60% at 20% 60%,rgba(201,168,76,.06) 0%,transparent 70%),
+  radial-gradient(ellipse 50% 40% at 85% 20%,rgba(201,168,76,.04) 0%,transparent 60%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.025) 1px,transparent 1px);background-size:60px 60px;opacity:1}
+.hero-content{position:relative;z-index:2;max-width:750px}
+.hero-badge{display:inline-flex;align-items:center;gap:.8rem;border:1px solid var(--border);padding:.4rem 1rem .4rem .6rem;margin-bottom:2rem}
+.hero-badge-dot{width:6px;height:6px;background:var(--or);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-badge span{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--or)}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,6.5vw,6rem);font-weight:300;line-height:1.02;margin-bottom:1.2rem;color:var(--blanc-pur)}
+h1 em{font-style:italic;color:var(--or)}
+h1 strong{font-weight:600;color:var(--blanc-pur)}
+.hero-desc{font-size:.92rem;line-height:2;color:var(--gris-clair);max-width:500px;margin-bottom:2.8rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn-primary{background:var(--or);color:var(--noir);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;padding:1rem 2.5rem;border:none;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:.7rem;font-weight:500}
+.btn-primary:hover{background:var(--or-light);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--blanc);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;padding:1rem 2.5rem;border:1px solid rgba(248,244,236,.15);cursor:pointer;transition:all .3s;text-decoration:none}
+.btn-ghost:hover{border-color:var(--or);color:var(--or)}
+.hero-stats{position:absolute;right:5%;bottom:8%;z-index:2;display:flex;gap:3rem}
+.hero-stat{text-align:right}
+.hero-stat-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:var(--or);line-height:1}
+.hero-stat-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gris);margin-top:.3rem}
+.hero-deco{position:absolute;right:4%;top:50%;transform:translateY(-50%);z-index:1;opacity:.025;font-family:'Cormorant Garamond',serif;font-size:min(20vw,200px);font-weight:300;line-height:1;user-select:none;white-space:nowrap}
+
+/* ── SECTIONS ── */
+.section-label{font-size:.62rem;letter-spacing:.45em;text-transform:uppercase;color:var(--or);margin-bottom:.9rem;display:flex;align-items:center;gap:.8rem}
+.section-label::before{content:'';width:28px;height:1px;background:var(--or)}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.8vw,3.2rem);font-weight:300;line-height:1.15;color:var(--blanc-pur)}
+h2 em{font-style:italic;color:var(--or)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+
+/* ── À PROPOS ── */
+#a-propos{padding:7rem 5%;background:var(--noir-2);display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.about-graphic{position:relative;height:480px}
+.about-box{position:absolute;border:1px solid var(--border)}
+.about-box-1{inset:0}
+.about-box-2{top:-12px;left:-12px;right:12px;bottom:12px;border-color:rgba(201,168,76,.06)}
+.about-box-inner{position:absolute;inset:2.5rem;background:linear-gradient(135deg,rgba(201,168,76,.05),rgba(201,168,76,.01));display:flex;flex-direction:column;justify-content:flex-end;padding:2rem}
+.about-stats{display:flex;gap:2.5rem;border-top:1px solid var(--border);padding-top:1.5rem}
+.a-stat-n{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:var(--or);line-height:1}
+.a-stat-l{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gris);margin-top:.3rem}
+.about-text p{font-size:.9rem;line-height:2;color:var(--gris-clair);margin-bottom:1.1rem}
+.about-text h2{margin-bottom:1.5rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+.tag{border:1px solid rgba(201,168,76,.2);color:var(--or-pale);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:.35rem .9rem}
+
+/* ── SERVICES ── */
+#services{padding:7rem 5%;background:var(--noir)}
+.services-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;gap:2rem;flex-wrap:wrap}
+.services-note{font-size:.82rem;color:var(--gris-clair);max-width:300px;line-height:1.8}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.svc{background:var(--noir);padding:2.5rem;transition:all .4s;position:relative;overflow:hidden;cursor:default}
+.svc::after{content:'';position:absolute;bottom:0;left:0;height:1px;width:0;background:var(--or);transition:width .4s}
+.svc:hover::after{width:100%}
+.svc:hover{background:rgba(201,168,76,.025)}
+.svc-num{font-family:'Cormorant Garamond',serif;font-size:.75rem;color:rgba(201,168,76,.3);letter-spacing:.15em;margin-bottom:1.2rem}
+.svc h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--blanc-pur);margin-bottom:.9rem;line-height:1.2}
+.svc p{font-size:.8rem;line-height:1.9;color:rgba(248,244,236,.45)}
+.svc-icon{font-size:1.4rem;margin-bottom:1rem;display:block}
+
+/* ── AVOCATS ── */
+#avocats{padding:7rem 5%;background:var(--noir-2)}
+.avocats-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;flex-wrap:wrap;gap:2rem}
+.avocats-note{font-size:.8rem;color:var(--gris-clair);max-width:280px;line-height:1.8}
+.avocats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.av-card{border:1px solid var(--border);transition:border-color .3s;overflow:hidden}
+.av-card:hover{border-color:rgba(201,168,76,.35)}
+.av-photo{height:260px;background:linear-gradient(145deg,rgba(201,168,76,.07),rgba(201,168,76,.02));display:flex;align-items:center;justify-content:center;position:relative}
+.av-initials{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:rgba(201,168,76,.25)}
+.av-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(8,8,8,.7))}
+.av-info{padding:1.5rem}
+.av-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--blanc-pur)}
+.av-title{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin:.35rem 0 .8rem}
+.av-spec{font-size:.77rem;color:rgba(248,244,236,.45);line-height:1.7}
+
+/* ── CONTACT & RDV ── */
+#contact{padding:7rem 5%;background:var(--noir);display:grid;grid-template-columns:1fr 1.3fr;gap:5rem;align-items:start}
+.contact-info h2{margin-bottom:1.5rem}
+.contact-info p{font-size:.88rem;line-height:2;color:var(--gris-clair);margin-bottom:2rem}
+.c-item{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;font-size:.82rem;color:var(--gris-clair)}
+.c-icon{width:38px;height:38px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;color:var(--or)}
+.rdv-form{background:var(--noir-2);border:1px solid var(--border);padding:2.8rem}
+.form-title{font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.2em;color:var(--or);margin-bottom:2rem}
+.fg{margin-bottom:1.4rem}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+label{display:block;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:.55rem}
+input,select,textarea{width:100%;background:transparent;border:1px solid var(--border);color:var(--blanc);font-family:'Raleway',sans-serif;font-size:.83rem;padding:.8rem 1rem;outline:none;transition:border-color .3s;-webkit-appearance:none;border-radius:0}
+input:focus,select:focus,textarea:focus{border-color:rgba(201,168,76,.5);background:rgba(201,168,76,.02)}
+input::placeholder,textarea::placeholder{color:rgba(248,244,236,.2)}
+select option{background:var(--noir);color:var(--blanc)}
+textarea{resize:none;height:90px;line-height:1.6}
+.form-btn{width:100%;background:var(--or);color:var(--noir);font-family:'Raleway',sans-serif;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;padding:1rem;border:none;cursor:pointer;transition:all .3s;margin-top:.5rem;font-weight:500}
+.form-btn:hover{background:var(--or-light)}
+.form-ok{display:none;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);color:var(--or);padding:.9rem;font-size:.78rem;text-align:center;margin-top:1rem}
+
+/* ── FOOTER ── */
+footer{background:#000;padding:4rem 5% 2rem;border-top:1px solid var(--border)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.f-brand .logo-main{margin-bottom:.8rem;display:block}
+.f-brand p{font-size:.77rem;line-height:1.9;color:rgba(248,244,236,.35);max-width:240px}
+.f-col h4{font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.25em;color:var(--or);margin-bottom:1.2rem}
+.f-col ul{list-style:none}
+.f-col li{margin-bottom:.65rem}
+.f-col a{font-size:.76rem;color:rgba(248,244,236,.4);text-decoration:none;transition:color .3s}
+.f-col a:hover{color:var(--or)}
+.footer-bottom{border-top:1px solid rgba(201,168,76,.07);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.67rem;color:rgba(248,244,236,.28)}
+.footer-bottom a{color:var(--or);text-decoration:none;font-size:.67rem}
+
+/* ── WHATSAPP ENHANCED ── */
+.wa-btn{position:fixed;bottom:6.5rem;right:1.8rem;width:54px;height:54px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:998;box-shadow:0 4px 20px rgba(37,211,102,.3);transition:all .3s;text-decoration:none}
+.wa-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.45)}
+.wa-btn svg{width:28px;height:28px;fill:#fff}
+.wa-tooltip{position:absolute;right:65px;background:rgba(8,8,8,.95);color:#fff;font-size:.68rem;letter-spacing:.1em;white-space:nowrap;padding:.45rem .9rem;border:1px solid var(--border);opacity:0;transform:translateX(8px);transition:all .3s;pointer-events:none;font-family:'Raleway',sans-serif}
+.wa-btn:hover .wa-tooltip{opacity:1;transform:translateX(0)}
+
+/* ── CALL BUTTON ── */
+.call-btn{position:fixed;bottom:1.8rem;right:1.8rem;width:54px;height:54px;background:var(--or);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:998;box-shadow:0 4px 20px rgba(201,168,76,.25);transition:all .3s;text-decoration:none}
+.call-btn:hover{transform:scale(1.08);background:var(--or-light)}
+.call-btn svg{width:24px;height:24px;fill:var(--noir)}
+.call-tooltip{position:absolute;right:65px;background:rgba(8,8,8,.95);color:#fff;font-size:.68rem;letter-spacing:.1em;white-space:nowrap;padding:.45rem .9rem;border:1px solid var(--border);opacity:0;transform:translateX(8px);transition:all .3s;pointer-events:none;font-family:'Raleway',sans-serif}
+.call-btn:hover .call-tooltip{opacity:1;transform:translateX(0)}
+
+/* ── CHATBOT ── */
+#chat-toggle{position:fixed;bottom:11.5rem;right:1.8rem;width:54px;height:54px;background:var(--noir-2);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:998;transition:all .3s;box-shadow:0 4px 20px rgba(0,0,0,.5)}
+#chat-toggle:hover{border-color:var(--or);transform:scale(1.08)}
+#chat-toggle svg{width:22px;height:22px;stroke:var(--or);fill:none;stroke-width:1.5}
+.chat-badge{position:absolute;top:-3px;right:-3px;background:var(--or);width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.5rem;color:var(--noir);font-weight:700}
+#chatbox{position:fixed;bottom:17.5rem;right:1.8rem;width:340px;background:var(--noir-2);border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,.8);z-index:999;display:none;flex-direction:column;max-height:480px}
+#chatbox.open{display:flex}
+.chat-header{padding:1rem 1.2rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.8rem;background:var(--noir)}
+.chat-av{width:32px;height:32px;background:var(--or-dim);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--or);font-family:'Cinzel',serif}
+.chat-name{flex:1}
+.chat-name strong{font-size:.78rem;color:var(--blanc-pur);display:block}
+.chat-name span{font-size:.6rem;color:var(--or);letter-spacing:.1em}
+.chat-close{background:none;border:none;color:var(--gris);cursor:pointer;font-size:1.1rem;transition:color .3s}
+.chat-close:hover{color:var(--or)}
+.chat-messages{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.8rem;max-height:320px}
+.chat-messages::-webkit-scrollbar{width:3px}
+.chat-messages::-webkit-scrollbar-track{background:transparent}
+.chat-messages::-webkit-scrollbar-thumb{background:var(--border)}
+.msg{max-width:85%;padding:.65rem .9rem;font-size:.78rem;line-height:1.6}
+.msg.bot{background:var(--noir-3);border-left:2px solid var(--or);align-self:flex-start;color:var(--gris-clair)}
+.msg.user{background:var(--or-dim);border:1px solid var(--border);align-self:flex-end;color:var(--blanc-pur);text-align:right}
+.msg.typing{background:var(--noir-3);border-left:2px solid var(--border);align-self:flex-start;color:var(--gris);font-style:italic}
+.chat-input-area{border-top:1px solid var(--border);padding:.8rem;display:flex;gap:.6rem}
+.chat-input-area input{flex:1;background:transparent;border:1px solid var(--border);color:var(--blanc);font-family:'Raleway',sans-serif;font-size:.78rem;padding:.5rem .8rem;outline:none}
+.chat-input-area input:focus{border-color:rgba(201,168,76,.4)}
+.chat-send{background:var(--or);border:none;color:var(--noir);cursor:pointer;padding:.5rem .8rem;transition:background .3s;font-size:.9rem}
+.chat-send:hover{background:var(--or-light)}
+
+/* ── ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-24px);transition:opacity .8s ease,transform .8s ease}
+.reveal-left.in{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal-right.in{opacity:1;transform:none}
+
+/* ── ESPACE CLIENT LINK ── */
+.client-banner{background:rgba(201,168,76,.04);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1rem 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.client-banner p{font-size:.78rem;color:var(--gris-clair)}
+.client-banner a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);text-decoration:none;border:1px solid var(--border);padding:.4rem .9rem;transition:all .3s}
+.client-banner a:hover{background:var(--or);color:var(--noir)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  #a-propos,#contact{grid-template-columns:1fr;gap:3rem}
+  .about-graphic{height:280px}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .avocats-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr;gap:2rem}
+  .avocats-head,.services-intro{flex-direction:column;align-items:flex-start}
+  .hero-stats{position:static;margin-top:3rem;flex-wrap:wrap;gap:2rem}
+  .hero-stat{text-align:left}
+  #chatbox{width:calc(100vw - 2.5rem);right:1.25rem}
+}
+@media(max-width:600px){
+  .services-grid,.avocats-grid{grid-template-columns:1fr}
+  .fr{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
 <body>
 
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <h2>Cabinet Avocat</h2>
-    <div>
-      <a href="#">Accueil</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
+<!-- NAV -->
+<nav id="nav">
+  <div class="logo-wrap">
+    <span class="logo-main">Cabinet Me Fara Gomis</span>
+    <span class="logo-sub">& Associés · Dakar, Sénégal</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#a-propos">À Propos</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#avocats">Avocats</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="espace-client.html" style="color:var(--or);opacity:1">Espace Client</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Rendez-vous</a>
+  <button class="burger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu navigation">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="#accueil" onclick="toggleMenu()">Accueil</a>
+  <a href="#a-propos" onclick="toggleMenu()">À Propos</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#avocats" onclick="toggleMenu()">Avocats</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="espace-client.html" onclick="toggleMenu()" style="color:var(--or)">Espace Client →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      <span>Excellence Juridique depuis 2005</span>
+    </div>
+    <h1>Le droit,<br>au service de <em>vos</em><br><strong>intérêts.</strong></h1>
+    <p class="hero-desc">Cabinet de prestige à Dakar. Droit des affaires, pénal, famille et immobilier. Une équipe engagée, une défense stratégique.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Prendre Rendez-vous
+      </a>
+      <a href="#services" class="btn-ghost">Nos Domaines</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">20+</div><div class="hero-stat-label">Années d'expérience</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">500+</div><div class="hero-stat-label">Dossiers résolus</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">98%</div><div class="hero-stat-label">Satisfaction client</div></div>
     </div>
   </div>
+  <div class="hero-deco" aria-hidden="true">Droit</div>
+</section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Cabinet d’Avocat Moderne & Stratégique</h1>
-    <p>Défense juridique, conseil et accompagnement au Sénégal</p>
-    <button class="btn">Prendre rendez-vous</button>
-  </section>
+<!-- BANNER ESPACE CLIENT -->
+<div class="client-banner">
+  <p>🔐 Vous êtes client du cabinet ? Accédez à vos dossiers en ligne.</p>
+  <a href="espace-client.html">Espace Client →</a>
+</div>
 
-  <!-- SERVICES -->
-  <section class="grid">
+<div class="divider"></div>
 
-    <div class="card">
-      <h3>Droit pénal</h3>
-      <p>Défense et assistance en matière pénale.</p>
+<!-- À PROPOS -->
+<section id="a-propos">
+  <div class="about-graphic reveal-left">
+    <div class="about-box about-box-2"></div>
+    <div class="about-box about-box-1"></div>
+    <div class="about-box-inner">
+      <div class="about-stats">
+        <div><div class="a-stat-n">20+</div><div class="a-stat-l">Ans d'exercice</div></div>
+        <div><div class="a-stat-n">500+</div><div class="a-stat-l">Clients défendus</div></div>
+        <div><div class="a-stat-n">4</div><div class="a-stat-l">Spécialités</div></div>
+      </div>
     </div>
-
-    <div class="card">
-      <h3>Droit civil</h3>
-      <p>Litiges, contrats et affaires civiles.</p>
+  </div>
+  <div class="about-text reveal-right">
+    <div class="section-label">Notre Identité</div>
+    <h2>Un cabinet fondé sur<br>l'<em>excellence</em> & la rigueur</h2>
+    <p>Fondé par Maître Fara Gomis, le cabinet s'est imposé comme une référence incontournable du droit sénégalais. Notre équipe allie expertise technique pointue, éthique irréprochable et engagement total envers chaque client.</p>
+    <p>Particuliers ou entreprises, nous vous accompagnons avec une vision stratégique et une approche personnalisée à chaque étape de vos procédures judiciaires et extrajudiciaires.</p>
+    <div class="tags">
+      <span class="tag">Intégrité</span>
+      <span class="tag">Confidentialité</span>
+      <span class="tag">Excellence</span>
+      <span class="tag">Réactivité</span>
+      <span class="tag">Engagement</span>
     </div>
+  </div>
+</section>
 
-    <div class="card">
-      <h3>Droit des affaires</h3>
-      <p>Accompagnement des entreprises et sociétés.</p>
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-intro">
+    <div>
+      <div class="section-label">Nos Domaines</div>
+      <h2>Une expertise <em>pluridisciplinaire</em></h2>
     </div>
+    <p class="services-note">Six domaines d'excellence pour répondre à toutes vos problématiques juridiques, au Sénégal et à l'international.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc reveal"><span class="svc-num">01</span><span class="svc-icon">⚖️</span><h3>Droit des Affaires</h3><p>Création de sociétés, contrats commerciaux, fusions-acquisitions, litiges commerciaux et arbitrage OHADA.</p></div>
+    <div class="svc reveal"><span class="svc-num">02</span><span class="svc-icon">🏛️</span><h3>Droit Pénal</h3><p>Défense pénale, assistance en garde à vue, instruction judiciaire et plaidoiries devant toutes les juridictions.</p></div>
+    <div class="svc reveal"><span class="svc-num">03</span><span class="svc-icon">👨‍👩‍👧</span><h3>Droit de la Famille</h3><p>Divorce, garde d'enfants, pensions alimentaires, successions, adoptions et régimes matrimoniaux.</p></div>
+    <div class="svc reveal"><span class="svc-num">04</span><span class="svc-icon">🏠</span><h3>Droit Immobilier</h3><p>Transactions immobilières, baux commerciaux et d'habitation, copropriété et contentieux fonciers.</p></div>
+    <div class="svc reveal"><span class="svc-num">05</span><span class="svc-icon">💼</span><h3>Droit du Travail</h3><p>Contrats de travail, licenciements, négociations collectives, représentation au tribunal du travail.</p></div>
+    <div class="svc reveal"><span class="svc-num">06</span><span class="svc-icon">🌍</span><h3>Droit International</h3><p>Investissements étrangers, arbitrage international, contrats transfrontaliers et droit OHADA.</p></div>
+  </div>
+</section>
 
-  </section>
+<div class="divider"></div>
 
-  <!-- À PROPOS -->
-  <section class="hero">
-    <h2>À propos du cabinet</h2>
-    <p>
-      Notre cabinet accompagne particuliers et entreprises avec rigueur,
-      confidentialité et excellence juridique.
-    </p>
-  </section>
+<!-- AVOCATS -->
+<section id="avocats" style="padding:7rem 5%;background:var(--noir-2)">
+  <div class="avocats-head reveal">
+    <div>
+      <div class="section-label">L'Équipe</div>
+      <h2>Des avocats à votre <em>écoute</em></h2>
+    </div>
+    <p class="avocats-note">Chaque membre de l'équipe est sélectionné pour son expertise, son éthique et son engagement envers chaque client.</p>
+  </div>
+  <div class="avocats-grid">
+    <div class="av-card reveal">
+      <div class="av-photo"><div class="av-initials">FG</div></div>
+      <div class="av-info">
+        <div class="av-name">Me Fara Gomis</div>
+        <div class="av-title">Fondatrice & Associée principale</div>
+        <p class="av-spec">Droit des affaires · Droit international · Arbitrage OHADA.<br>Ancienne du Barreau de Paris. 20 ans d'expérience.</p>
+      </div>
+    </div>
+    <div class="av-card reveal">
+      <div class="av-photo"><div class="av-initials">AM</div></div>
+      <div class="av-info">
+        <div class="av-name">Me Abdou Mbaye</div>
+        <div class="av-title">Associé</div>
+        <p class="av-spec">Droit pénal · Droit de la presse · Libertés fondamentales.<br>Plaideur reconnu devant la Cour Suprême.</p>
+      </div>
+    </div>
+    <div class="av-card reveal">
+      <div class="av-photo"><div class="av-initials">ND</div></div>
+      <div class="av-info">
+        <div class="av-name">Me Ndèye Diallo</div>
+        <div class="av-title">Collaboratrice senior</div>
+        <p class="av-spec">Droit de la famille · Successions · Droit social.<br>Spécialiste de la médiation familiale.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- WHATSAPP -->
-  <a class="whatsapp-float" href="https://wa.me/221000000000">
-    💬
-  </a>
+<div class="divider"></div>
 
+<!-- CONTACT & RDV -->
+<section id="contact">
+  <div class="contact-info reveal-left">
+    <div class="section-label">Nous Contacter</div>
+    <h2>Prenez <em>rendez-vous</em><br>avec nos experts</h2>
+    <p>Consultation confidentielle avec un avocat spécialisé. Réponse garantie sous 24h ouvrables.</p>
+    <div class="c-item"><div class="c-icon">📍</div><div>123 Avenue Bourguiba, Plateau, Dakar</div></div>
+    <div class="c-item"><div class="c-icon">📞</div><div>+221 33 123 45 67</div></div>
+    <div class="c-item"><div class="c-icon">📱</div><div>+221 77 123 45 67 (WhatsApp)</div></div>
+    <div class="c-item"><div class="c-icon">✉️</div><div>contact@cabinetgomis.sn</div></div>
+    <div class="c-item"><div class="c-icon">🕐</div><div>Lundi – Vendredi : 08h00 – 18h00</div></div>
+  </div>
+  <div class="rdv-form reveal-right">
+    <div class="form-title">Demande de Rendez-vous</div>
+    <form onsubmit="submitRDV(event)">
+      <div class="fr">
+        <div class="fg"><label>Prénom</label><input type="text" placeholder="Votre prénom" required></div>
+        <div class="fg"><label>Nom</label><input type="text" placeholder="Votre nom" required></div>
+      </div>
+      <div class="fg"><label>Email</label><input type="email" placeholder="votre@email.com" required></div>
+      <div class="fg"><label>Téléphone</label><input type="tel" placeholder="+221 77 000 00 00"></div>
+      <div class="fg">
+        <label>Domaine juridique</label>
+        <select required>
+          <option value="" disabled selected>Sélectionner un domaine</option>
+          <option>Droit des affaires</option>
+          <option>Droit pénal</option>
+          <option>Droit de la famille</option>
+          <option>Droit immobilier</option>
+          <option>Droit du travail</option>
+          <option>Droit international</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="fg"><label>Message</label><textarea placeholder="Décrivez brièvement votre situation..."></textarea></div>
+      <button type="submit" class="form-btn">Envoyer la demande →</button>
+      <div class="form-ok" id="formOk">✓ Demande envoyée. Nous vous recontactons sous 24h.</div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="f-brand">
+      <span class="logo-main">Cabinet Me Fara Gomis & Associés</span>
+      <p style="margin-top:.8rem">Un cabinet de référence au service de vos droits, à Dakar et partout au Sénégal depuis 2005.</p>
+    </div>
+    <div class="f-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#a-propos">À Propos</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#avocats">L'Équipe</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="espace-client.html">Espace Client 🔐</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Politique de confidentialité</a></li>
+        <li><a href="#">Barreau de Dakar</a></li>
+        <li><a href="#">OHADA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Cabinet Me Fara Gomis & Associés — Tous droits réservés</p>
+    <p style="color:rgba(201,168,76,.35);letter-spacing:.1em">DAKAR · SÉNÉGAL</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a class="wa-btn" href="https://wa.me/221771234567?text=Bonjour%20Cabinet%20Me%20Fara%20Gomis%2C%20je%20souhaite%20prendre%20rendez-vous." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <div class="wa-tooltip">Écrire sur WhatsApp</div>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- CALL BUTTON -->
+<a class="call-btn" href="tel:+221331234567" aria-label="Appeler">
+  <div class="call-tooltip">Appeler le cabinet</div>
+  <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+</a>
+
+<!-- CHATBOT TOGGLE -->
+<div id="chat-toggle" onclick="toggleChat()" aria-label="Assistant juridique IA">
+  <div class="chat-badge">IA</div>
+  <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</div>
+
+<!-- CHATBOX -->
+<div id="chatbox">
+  <div class="chat-header">
+    <div class="chat-av">FG</div>
+    <div class="chat-name">
+      <strong>Assistant du Cabinet</strong>
+      <span>● En ligne</span>
+    </div>
+    <button class="chat-close" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages"></div>
+  <div class="chat-input-area">
+    <input type="text" id="chatInput" placeholder="Posez votre question..." onkeydown="if(event.key==='Enter')sendMsg()">
+    <button class="chat-send" onclick="sendMsg()">→</button>
+  </div>
+</div>
+
+<script>
+// ── NAV SCROLL ──
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60)
+})
+
+// ── MOBILE MENU ──
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open')
+}
+
+// ── FORM ──
+function submitRDV(e){
+  e.preventDefault()
+  document.getElementById('formOk').style.display='block'
+  e.target.reset()
+  setTimeout(()=>document.getElementById('formOk').style.display='none',6000)
+}
+
+// ── REVEAL ON SCROLL ──
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})
+},{threshold:0.1})
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>io.observe(el))
+
+// ── CHATBOT ──
+let chatOpen=false
+const MESSAGES=[
+  {role:'bot',text:'Bonjour ! Je suis l\'assistant du Cabinet Me Fara Gomis & Associés. Comment puis-je vous aider aujourd\'hui ?'}
+]
+
+function toggleChat(){
+  chatOpen=!chatOpen
+  const box=document.getElementById('chatbox')
+  box.classList.toggle('open',chatOpen)
+  if(chatOpen&&document.getElementById('chatMessages').children.length===0){
+    renderMessages()
+  }
+}
+
+function renderMessages(){
+  const container=document.getElementById('chatMessages')
+  container.innerHTML=''
+  MESSAGES.forEach(m=>{
+    const div=document.createElement('div')
+    div.className=`msg ${m.role}`
+    div.textContent=m.text
+    container.appendChild(div)
+  })
+  container.scrollTop=container.scrollHeight
+}
+
+async function sendMsg(){
+  const input=document.getElementById('chatInput')
+  const text=input.value.trim()
+  if(!text)return
+  input.value=''
+  MESSAGES.push({role:'user',text})
+  renderMessages()
+  
+  // Typing indicator
+  const container=document.getElementById('chatMessages')
+  const typing=document.createElement('div')
+  typing.className='msg typing'
+  typing.textContent='...'
+  container.appendChild(typing)
+  container.scrollTop=container.scrollHeight
+
+  try{
+    const response=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:1000,
+        system:`Tu es l'assistant virtuel du Cabinet Me Fara Gomis & Associés, un cabinet d'avocats de prestige à Dakar, Sénégal. Tu réponds en français, de manière professionnelle et concise. Tu peux donner des informations générales sur les services du cabinet (droit des affaires, pénal, famille, immobilier, travail, international). Pour toute consultation juridique spécifique, tu invite l'utilisateur à prendre rendez-vous ou à appeler le +221 33 123 45 67. Ne donne jamais de conseils juridiques précis. Reste courtois et utile.`,
+        messages:MESSAGES.filter(m=>m.role!=='bot'||MESSAGES.indexOf(m)>0).map(m=>({
+          role:m.role==='user'?'user':'assistant',
+          content:m.text
+        }))
+      })
+    })
+    const data=await response.json()
+    container.removeChild(typing)
+    const reply=data.content?.[0]?.text||'Je suis désolé, une erreur est survenue. Appelez-nous au +221 33 123 45 67.'
+    MESSAGES.push({role:'bot',text:reply})
+    renderMessages()
+  }catch(err){
+    container.removeChild(typing)
+    const fallbackReplies=[
+      'Pour cette question, je vous conseille de contacter directement le cabinet au +221 33 123 45 67.',
+      'Maître Fara Gomis ou un de ses associés pourra vous répondre avec précision. Prenez rendez-vous via notre formulaire.',
+      'Nous vous recommandons une consultation avec un de nos avocats spécialisés. Appelez-nous au +221 33 123 45 67.'
+    ]
+    MESSAGES.push({role:'bot',text:fallbackReplies[Math.floor(Math.random()*fallbackReplies.length)]})
+    renderMessages()
+  }
+}
+</script>
 </body>
 </html>
